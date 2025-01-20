@@ -13,6 +13,8 @@ const Filters = ({ onFilterChange }) => {
   return (
     <div className="filters">
       <h2>Filters</h2>
+
+      {/* Локация */}
       <div className="filter-group">
         <label htmlFor="location">Location</label>
         <input
@@ -23,6 +25,7 @@ const Filters = ({ onFilterChange }) => {
         />
       </div>
 
+      {/* Оборудование */}
       <div className="filter-group">
         <h3>Vehicle equipment</h3>
         <div className="filter-icons">
@@ -41,6 +44,7 @@ const Filters = ({ onFilterChange }) => {
         </div>
       </div>
 
+      {/* Тип авто */}
       <div className="filter-group">
         <h3>Vehicle type</h3>
         <div className="filter-icons">
