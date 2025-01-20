@@ -1,0 +1,25 @@
+.camper-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    /* Расстояние между иконками */
+    margin-top: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+    /* Цвет фона, если нужен */
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.feature-icon {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}

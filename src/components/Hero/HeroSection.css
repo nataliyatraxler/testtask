@@ -1,0 +1,70 @@
+.hero-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    /* Текст выравнивается влево */
+    align-items: center;
+    /* Текст по центру вертикально */
+    height: 100vh;
+    /* Блок занимает всю высоту экрана */
+    color: white;
+    padding: 64px;
+    /* Отступы внутри */
+    overflow: hidden;
+    /* Убирает лишние элементы, выходящие за пределы блока */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: scaleX(1);
+    /* Убирает зеркальное отражение, если оно было */
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-top: 0;
+    /* Убирает ненужные отступы сверху */
+    z-index: 1;
+    /* Текст поверх изображения */
+    text-align: left;
+    /* Текст выровнен влево */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Добавляет теневой эффект */
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    /* Добавляет теневой эффект */
+}
+
+.view-now-button {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.view-now-button:hover {
+    background-color: #e63939;
+    transform: scale(1.05);
+    /* Увеличение при наведении */
+}

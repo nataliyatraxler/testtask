@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Road Bear C 23-25",
+      "price": "10000",
+      "location": "Ukraine, Kyiv",
+      "gallery": { "thumb": "https://example.com/image1.jpg" }
+    },
+    {
+      "id": "2",
+      "name": "Cruise America C-21",
+      "price": "8000",
+      "location": "Ukraine, Poltava",
+      "gallery": { "thumb": "https://example.com/image2.jpg" }
+    }
+  ]
+}
