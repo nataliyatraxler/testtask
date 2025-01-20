@@ -4,7 +4,7 @@ import './HeroSection.css';
 
 const HeroSection = () => (
   <div className="hero-container">
-    <img src="/src/assets/images/campers.jpeg" alt="Campers of your dreams" class="hero-image" />
+    <img src="/assets/images/campers.jpeg" alt="Campers of your dreams" class="hero-image" />
 
     <div className="hero-text">
       <h1>Campers of your dreams</h1>
