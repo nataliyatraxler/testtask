@@ -1,37 +1,17 @@
-import React, { useState } from "react";
-import Filters from "../../components/Filters/Filters";
-import CamperList from "../../components/CamperList/CamperList";
+import CampersFilters from '../../components/CampersFilters/CampersFilters'
+import CampersList from '../../components/CampersList/CampersList'
 
-const Catalog = ({ campers }) => {
-  const [filters, setFilters] = useState({});
-  
-  const handleFilterChange = (key, value) => {
-    setFilters((prevFilters) => ({
-      ...prevFilters,
-      [key]: value,
-    }));
-  };
+import css from './Catalog.module.css'
 
-  const filteredCampers = campers.filter((camper) => {
-    if (filters.location && !camper.location.toLowerCase().includes(filters.location.toLowerCase())) {
-      return false;
-    }
-    if (filters.AC && !camper.features?.AC) return false;
-    if (filters.TV && !camper.features?.TV) return false;
-    if (filters.Kitchen && !camper.features?.Kitchen) return false;
-    if (filters.Bathroom && !camper.features?.Bathroom) return false;
-    if (filters.type && camper.type !== filters.type) {
-      return false;
-    }
-    return true;
-  });
-
+function Catalog() { 
   return (
-    <div className="catalog">
-      <Filters onFilterChange={handleFilterChange} />
-      <CamperList campers={filteredCampers} />
+    <div className='container'>
+      <div className={css.campers}>
+        <CampersFilters />
+        <CampersList />
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Catalog;
+export default Catalog

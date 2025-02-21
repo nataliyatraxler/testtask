@@ -1,12 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit';
-import filtersReducer from './slices/filtersSlice';
-import campersReducer from './slices/campersSlice';
+import { configureStore } from '@reduxjs/toolkit'
+import { persistStore } from 'redux-persist';
+import filtersReducer from './filterSlice'
+import campersReducer from './campersSlice'
+import favoritsReducer from './favoritsSlice'
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     filters: filtersReducer,
     campers: campersReducer,
-  },
-});
+    favorits: favoritsReducer,
+  }
+})
 
-export default store;
+export const persistor = persistStore(store)
